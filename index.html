@@ -1,19 +1,45 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
-		
-		<meta name="viewport" content="width=device-width, initial-scale=1">	
-		<link rel = "stylesheet" type = "text/css" href = "format.css">   <!-- Link to style sheet named format.css -->
-		<script type="text/javascript" src="cordova.js"></script> 
-        <script type="text/javascript" src="js/index.js"></script>
-        <title>Bluifruit</title>
-    </head>
-     <body onload="onLoad()">
-		<!-- Content: div-tag with id = "content" -->
-		<div id = "content">
+<!DOCTYPE>
+<head>
+<link rel = "stylesheet" type = "text/css" href = "format.css">
+<script type="text/javascript" src="index.js"></script>
+<script type="text/javascript" src="cordova.js"></script>
+
+  <meta charset="utf-8" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+
+<h1>
+uLock
+</h1>
+<body onload="onLoad()"
+<div id = "content1">
+<div id = "testtekst">
+Forbind dig til Bluetooth for at få adgang til lokalet.
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<img src= "locklogo.png" style ="width:25%";>
+
+<br>
+<br>
+<br>
+
+
+<div id = "divbutton">
+<div style="text-align:center;">
+<button id="testknap" onclick = "refreshDeviceList()" class="button" >Connect via Bluetooh</button>
+<button id="testknap2" class="button" >Disconnect</button>
+
+</div>
+<br>
+<div id = "content">
 			
 			<h1>Bluifruit øvelse</h1>
 			   
@@ -24,10 +50,6 @@
 			<div id="bleId">DeviceId:</div>
 			<div id="debugDiv"></div>
 			<br><br>
-			<button id="ledOnButton" onclick = "data('1')">Set led ON</button>
-			<br><br>
-			<button id="ledOffButton" onclick = "data('0')">Set Led Off</button>
-			<br><br><br>
 
 			<input type="hidden" id="GemtInput" >
 			<br>
@@ -41,7 +63,7 @@
 			<button id="disconnectButton"onClick="disconnect()">Disconnect</button>
 			<div id="receiveDiv"></div>
 		</div>
-    </body>
-</html>
-			
 
+
+</div>
+</body>
