@@ -39,7 +39,7 @@ img
 
 /* width will be 100% of content */
 #refreshButton{
-	width: 25%;
+	width: 50%;
 	background-color: #4CAF50;
   border: 2px solid black;
   color: white;
@@ -54,7 +54,7 @@ img
 }
 
 #disconnectButton{
-	width: 25%;
+	width: 50%;
 	background-color: #4CAF50;
   border: 2px solid black;
   color: white;
