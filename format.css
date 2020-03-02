@@ -1,32 +1,61 @@
-body {
+body{
 	background-color: #003399;
+}	
+img{
+	width: 100%;	
 }
 
-html *
-{
+html *{
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 }
 
-h1 {
-text-align: center;
-width: 80%;
-margin auto;
+
+/* The content div soround
+  * every thing in the body
+  * The css make content  smaller than the body itself
+  * and centret.
+  */
+#content {
+	width: 75%;
+	margin: auto;
 }
 
-
-#testtekst {
-	text-align: center;	
-	font-weight: bold;
+img 
+{
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
 }
 
-#content1 {
-	width: 80%;
-	margin auto;
+#bleDeviceList{
+	
+}	
+#messageInput{
+	
+}
+#list{
+	background-color: red;
 }
 
+/* width will be 100% of content */
+#refreshButton{
+	width: 25%;
+	background-color: #4CAF50;
+  border: 2px solid black;
+  color: white;
+  padding: 35px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  display:block  
+}
 
-.button {
-  background-color: #4CAF50;
+#disconnectButton{
+	width: 25%;
+	background-color: #4CAF50;
   border: 2px solid black;
   color: white;
   padding: 35px;
@@ -37,13 +66,16 @@ margin auto;
   margin-left: auto;
   margin-right: auto;
   display:block  
+	
+	
 }
-
-
-
-img 
-{
-	display: block;
-	margin-left: auto;
-	margin-right: auto;
+#sendButton{
+	width: 100%;
+	
+}
+#ledOnButton{
+	width: 100%;
+}
+#ledOffButton{
+	width: 100%;
 }
