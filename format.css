@@ -66,16 +66,26 @@ img
   margin-left: auto;
   margin-right: auto;
   display:block  
-	
-	
+
 }
+
+
+#ledOnButton {
+	width: 25%;
+	background-color: #4CAF50;
+  border: 2px solid black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin-left: auto;
+  margin-right: auto;
+  display:block 
+}
+
 #sendButton{
 	width: 100%;
 	
-}
-#ledOnButton{
-	width: 100%;
-}
-#ledOffButton{
-	width: 100%;
 }
