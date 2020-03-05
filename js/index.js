@@ -56,39 +56,14 @@ function refreshDeviceList(){
 
 function onDiscoverDevice(device){
 	//Make a list in html and show devises
-	if (device.name == "MPBLUE"){
+	if (device.name == "SERVERRUM"){
 		var listItem = document.createElement('li'),
-		html = device.name+ "," + device.id;
+		html = device.name;
 		listItem.innerHTML = html;
 		document.getElementById("bleDeviceList").appendChild(listItem);
 	}
 }
-Fingerprint.isAvailable(isAvailableSuccess, isAvailableError);
- 
-    function isAvailableSuccess(result) {
-      /*
-      result depends on device and os. 
-      iPhone X will return 'face' other Android or iOS devices will return 'finger'  
-      */
-      alert("Fingerprint available");
-    }
- 
-    function isAvailableError(error) {
-      // 'error' will be an object with an error code and message
-      alert(error.message);
-    }
-	
-Fingerprint.show({
-      description: "Some biometric description"
-    }, successCallback, errorCallback);
- 
-    function successCallback(){
-      alert("Authentication successful");
-    }
- 
-    function errorCallback(error){
-      alert("Authentication invalid " + error.message);
-    }
+
 
 function conn(){
 	var  deviceTouch= event.srcElement.innerHTML;
@@ -141,66 +116,4 @@ function onDisconnect(){
 function onError(reason)  {
 	alert("ERROR: " + reason); // real apps should use notification.alert
 }
-const Page = require("sf-core/ui/page");
-const extend = require("js-base/core/extend");
-const Button = require('sf-core/ui/button');
-const FlexLayout = require('sf-core/ui/flexlayout');
-const System = require('sf-core/device/system');
-
-var pageFingerprint = extend(Page)(
-    function(_super) {
-        _super(this);
-        
-        var myButtonFingerPrintAvailable = new Button({
-            text: 'FingerPrint Available',
-            height: 75,
-            width: 200,
-            margin: 15,
-            alignSelf: FlexLayout.AlignSelf.CENTER,
-            onPress: function() {
-                alert("System.fingerPrintAvailable: "+ System.fingerPrintAvailable);
-            }.bind(this)
-        });
-        
-        var myButtonAuthFingerPrint = new Button({
-            text: 'Authenticate with FingerPrint',
-            height: 75,
-            width: 200,
-            margin: 15,
-            alignSelf: FlexLayout.AlignSelf.CENTER,
-            onPress: function() {
-                if(System.fingerPrintAvailable){
-                    System.validateFingerPrint({
-                           android: {
-                               title: "Title"
-                           },
-                           message : "Message",
-                           onSuccess : function(){
-                                 alert("You have been successfully logged in");
-                           },
-                           onError : function(){
-                                 alert("Login failed");
-                           }
-                     });
-                }
-                else{
-                    if(System.OS === 'iOS'){
-                        alert("Fingerprint is not available. You should enable TouchID to use this authentication.");
-                    }
-                    else{
-                        alert("Fingerprint is not available. If your device supprorts fingerprint, you should add at least one fingerprint.");
-                    }
-                }
-            }.bind(this)
-        });
-        
-        this.layout.flexDirection = FlexLayout.FlexDirection.COLUMN;
-        this.layout.justifyContent = FlexLayout.JustifyContent.CENTER;
-        
-        this.layout.addChild(myButtonFingerPrintAvailable);
-        this.layout.addChild(myButtonAuthFingerPrint);
-    }
-);
-module.exports = pageFingerprint;
-
 	

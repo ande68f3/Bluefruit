@@ -9,12 +9,6 @@ html *{
 	font-family: Helvetica Neue,Helvetica,Arial,sans-serif; 
 }
 
-
-/* The content div soround
-  * every thing in the body
-  * The css make content  smaller than the body itself
-  * and centret.
-  */
 #content {
 	width: 75%;
 	margin: auto;
@@ -25,6 +19,7 @@ img
 	display: block;
 	margin-left: auto;
 	margin-right: auto;
+	width:25%
 }
 
 #bleDeviceList{
@@ -70,7 +65,7 @@ img
 }
 
 
-#ledOnButton {
+#lockButton {
 	width: 25%;
 	background-color: #4CAF50;
   border: 2px solid black;
